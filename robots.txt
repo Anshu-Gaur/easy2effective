@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Important folders allow
+Allow: /assets/
+Allow: /pages/
+Allow: /includes/
+
+# Block admin or system files
+Disallow: /config/
+Disallow: /core/
+Disallow: /.git/
+Disallow: /.env
+Disallow: /error_log
+
+# Block URL parameters
+Disallow: /*?page=
+
+# Sitemap location
+Sitemap: https://www.easy2effective.com/sitemap.xml
