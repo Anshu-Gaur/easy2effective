@@ -66,7 +66,7 @@ if (isset($data['queryForm'])) {
 
     // 2) User mail (IMPORTANT)
     $userMailSent = sendUserMail($data);
-
+    
     // Update ONLY if user mail sent
     if ($userMailSent) {
         $update = $conn->prepare("UPDATE customer_queries SET mail_sent='Yes' WHERE id=?");
@@ -92,7 +92,7 @@ function sendAdminMail($howWebsite, $name, $number, $email, $message) {
 
     try {
         $mail->isSMTP();
-        $mail->Host = 'easy2effective.com';
+        $mail->Host = 'mail.easy2effective.com';
         $mail->SMTPAuth = true;
         $mail->Username = 'no-reply@easy2effective.com';
         $mail->Password = 'no-reply#@E2e';
@@ -131,7 +131,7 @@ function sendUserMail($data) {
 
     try {
         $mail->isSMTP();
-        $mail->Host = 'easy2effective.com';
+        $mail->Host = 'mail.easy2effective.com';
         $mail->SMTPAuth = true;
         $mail->Username = 'no-reply@easy2effective.com';
         $mail->Password = 'no-reply#@E2e';

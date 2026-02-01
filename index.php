@@ -4,7 +4,7 @@
     $metaDescription = "HOme page";
     $canonical = $baseUrl;
     $metaTitle = "Easy2Effective";
-https://github.com/Anshu-Gaur/easy2effective.git
+
     if(isset($_GET["page"])){
         $page = $_GET["page"];
     }else{
