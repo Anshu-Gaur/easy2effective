@@ -83,7 +83,7 @@
             <div class="loader-container  items-center jc-center">
                 <div class="loader"></div>
             </div>
-            <button type="submit" name="submit-btn" class="btn btn-primary r-50" id="submitQuery">submit now</button>
+            <button type="submit" name="submit-btn" class="btn btn-primary r-50" id="submitQuery">Submit Now</button>
         </form>
     </div>
 </section>
