@@ -147,7 +147,6 @@ function sendUserMail($data) {
         $mail->Subject = "Thank You for Reaching Out to Easy2Effective";
 
         $mail->Body = $template->userTemplate($data);
-ub
         return $mail->send();
     } catch (Exception $e) {
         return false;

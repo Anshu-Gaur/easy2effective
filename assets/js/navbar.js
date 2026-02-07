@@ -1,39 +1,55 @@
-// navbar
-let menuOpen = false;
-
+// navbar mobile fix
 const nav = document.getElementById('nav-links');
 const icon = document.getElementById('menuIcon');
+const navLinks = document.querySelectorAll('#nav-links a');
 
+let menuOpen = false;
+
+// open menu
 function openMenu() {
-  nav.style.right = '0';
-  nav.style.opacity = '1';
+  nav.classList.add('active');
   icon.classList.remove('fa-bars');
   icon.classList.add('fa-xmark');
   menuOpen = true;
 }
 
+// close menu
 function closeMenu() {
-  nav.style.right = '-100%';
-  nav.style.opacity = '0';
+  nav.classList.remove('active');
   icon.classList.remove('fa-xmark');
   icon.classList.add('fa-bars');
   menuOpen = false;
 }
 
+// toggle
 function toggleMenu() {
+  if (window.innerWidth > 576) return; // desktop ignore
   menuOpen ? closeMenu() : openMenu();
 }
 
-/* Reset menu on page show (refresh / back button) */
-window.addEventListener('pageshow', () => {
-  if (window.innerWidth <= 576) {
-    closeMenu();
-  }
+/* ✅ Close menu when any link is clicked (mobile) */
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    if (window.innerWidth <= 576) {
+      closeMenu();
+    }
+  });
 });
 
-/* Auto close menu when resizing to desktop */
+/* ✅ Always close menu on page load / back navigation */
+window.addEventListener('pageshow', () => {
+  closeMenu();
+});
+
+/* ✅ Handle resize correctly */
 window.addEventListener('resize', () => {
-  if (window.innerWidth >= 576) {
-    openMenu();
+  if (window.innerWidth > 576) {
+    // desktop reset
+    nav.classList.remove('active');
+    icon.classList.remove('fa-xmark');
+    icon.classList.add('fa-bars');
+    menuOpen = false;
+  } else {
+    closeMenu();
   }
 });

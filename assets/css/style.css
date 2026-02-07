@@ -512,9 +512,10 @@ header{
 		position: fixed;
 		top:65px;
 		right: -100%;
+		opacity: 0;
 		z-index: 999;
 		width: 100%;
-		height: 100vh;
+		height: calc(100vh - 65px);
 		padding:12px 20px;
 		gap: 12px;
 		display: flex;
@@ -523,6 +524,11 @@ header{
 		flex-direction: column;
 		background-color: white;
 		transition: var(--transition);
+	}
+
+	.nav-links.active{
+		right: 0;
+		opacity: 1;
 	}
 
 	.dropdown{
