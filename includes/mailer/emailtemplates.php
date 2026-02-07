@@ -9,7 +9,7 @@ class MailTemplate{
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Easy2Effective – Form Submission</title>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+            <link rel="stylesheet" href="https://lh3.googleusercontent.com/a/ACg8ocLMgAnso9O51x3HrZs3sZqmLy9F5Bx_l7DEg_EUZUBu0uSx_kDJ=s40-p"/>
             </head>
 
             <body style="margin:0; padding:0; background-color:#f2f6fa; font-family:Arial, Helvetica, sans-serif;">
