@@ -257,7 +257,7 @@ header{
 	width: 150px;
 	padding:20px 0 0 0;
 	gap:10px;
-	display: none;
+	display:none;
 }
 
 .dropdown li{
@@ -516,8 +516,7 @@ header{
 		z-index: 999;
 		width: 100%;
 		height: calc(100vh - 65px);
-		padding:12px 20px;
-		gap: 12px;
+		gap: 0;
 		display: flex;
 		align-items: start;
 		justify-content: start;
@@ -533,13 +532,38 @@ header{
 
 	.dropdown{
 		position:static;
-		padding:6px 0 0 12px;
+		width: 100%;
+		gap: 0;
+		padding:8px 0 0 0;
 	}
 
 	.dropdown li{
-		padding: 0 12px;
 		width: 100%;
 	}
+
+	.nav-links li a::after {
+		display: none;
+	}
+
+	.nav-links li a:hover::after {
+		width: 0;
+	}
+
+	.nav-links li,.dropdown li{
+		width: 100%;
+		padding:8px 0;
+		border-radius: 0;
+		border-top: 2px solid var(--primary);
+	}
+
+	.nav-links li a{
+		padding:0 12px;
+	}
+
+	.dropdown li a{
+		padding:0 24px;
+	}
+
 }
 
 @media only screen and (max-width:499px){
